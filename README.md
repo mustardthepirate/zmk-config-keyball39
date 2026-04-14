@@ -198,4 +198,4 @@ On every push, GitHub Actions produces three UF2s: `keyball39_left`, `keyball39_
 
 1. Double-tap reset → half mounts as `NICENANO`.
 2. First time (or after keymap breaks BT): flash `settings_reset.uf2` to both halves, then the real firmware.
-3. Left half is central (handles host BT); right half has the trackball.
+3. The central half is the one that pairs to the host; BT profile keys (FN layer) only fire on the central side.
