@@ -118,12 +118,16 @@
             >;
         };
 
+        /* FN + system controls. Hold R:
+         *   top-left row = BT profile switching (0..3), BT_CLR
+         *   bottom-left = &bootloader (for re-flashing over USB)
+         */
         fn_layer {
             label = "FN";
             bindings = <
-&trans           &trans          &trans        &trans          &trans                                               &trans        &kp F7           &kp F8           &kp F9           &kp F10
-&trans           &none           &kp LALT      &kp LCTRL       &trans                                               &trans        &kp F4           &kp F5           &kp F6           &kp F11
-&trans           &trans          &trans        &trans          &trans                                               &trans        &kp F1           &kp F2           &kp F3           &kp F12
+&bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_CLR                                           &trans        &kp F7           &kp F8           &kp F9           &kp F10
+&trans           &trans          &kp LALT      &kp LCTRL       &out OUT_TOG                                         &trans        &kp F4           &kp F5           &kp F6           &kp F11
+&bootloader      &sys_reset      &trans        &trans          &trans                                               &trans        &kp F1           &kp F2           &kp F3           &kp F12
 &trans           &trans          &trans        &trans          &trans          &trans           &trans              &trans                                                           &trans
             >;
         };
